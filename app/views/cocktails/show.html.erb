@@ -1,44 +1,47 @@
-<div class="container">
+<div class="banner-show"
+  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+         url(<%= @cocktail.photo.present? ? (cl_image_path(@cocktail.photo, crop: :fill)) : image_path('cocktail_3.jpg') %> )">
   <h1><%= @cocktail.name %></h1>
-  <hr>
-  <h3>How to make the cocktail :</h3>
+</div>
+
+<div class="container min_width">
+  <h3 class="margin" >How to make the cocktail :</h3>
   <ul>
   <% @cocktail.doses.each do |dose| %>
-    <li>
-      <%= dose.description + " of " %>
-      <%= Ingredient.find(dose.ingredient_id).name%>
+    <li class="margin" >
+      <%= dose.description + " of " + dose.ingredient.name%>
       <%= link_to(dose_path(dose.id), method: :delete, data: { confirm: 'Are you sure?' }) do %>
         <i class="fas fa-trash-alt"></i>
       <% end %>
     </li>
   <% end %>
   </ul>
-  <div class= "row">
-    <div class= "col-xs-4">
-      <div class="box">
-        <%= link_to "Change the name", edit_cocktail_path(@cocktail),
-            class: "btn btn-primary" %>
-      </div>
+</div>
+<div class= "row margin">
+  <div class= "col-xs-3">
+    <div class="box">
+      <%= link_to "Change the name", edit_cocktail_path(@cocktail),
+          class: "btn btn-primary" %>
     </div>
-    <div class= "col-xs-4">
-      <div class="box">
-        <%= link_to "Add an ingredient", new_cocktail_dose_path(@cocktail),
-            class: "btn btn-success" %>
-      </div>
+  </div>
+  <div class= "col-xs-3">
+    <div class="box">
+      <%= link_to "Add an ingredient", new_cocktail_dose_path(@cocktail),
+          class: "btn btn-primary" %>
     </div>
-    <div class="col-xs-4">
-      <div class="box">
-        <%= link_to "Return to the list", cocktails_path,
-          class: 'btn btn-primary'
-        %>
-      </div>
+  </div>
+  <div class="col-xs-3">
+    <div class="box">
+      <%= link_to "Return to the list", cocktails_path,
+        class: 'btn btn-primary'
+      %>
     </div>
-    <div class="col-xs-4">
-      <div class="box">
-        <%= link_to "Edit a cocktail", edit_cocktail_path(@cocktail),
-          class: 'btn btn-primary'
-        %>
-      </div>
+  </div>
+  <div class="col-xs-3">
+    <div class="box">
+      <%= link_to "Edit a cocktail", edit_cocktail_path(@cocktail),
+        class: 'btn btn-primary'
+      %>
     </div>
   </div>
 </div>

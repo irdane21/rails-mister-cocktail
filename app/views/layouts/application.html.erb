@@ -14,6 +14,25 @@
 
   <body>
     <%= yield %>
+    <div class="footer">
+      <div class="footer-links">
+        <%= link_to("https://github.com/irdane21", target: "_blank") do %>
+          <i class="fab fa-github"></i>
+        <% end %>
+        <%= link_to("https://www.instagram.com/irdane_21/", target: "_blank") do %>
+          <i class="fab fa-instagram"></i>
+        <% end %>
+        <%= link_to("https://www.facebook.com/adrien.lefrancq?ref=bookmarks", target: "_blank") do %>
+          <i class="fab fa-facebook-f"></i>
+        <% end %>
+        <%= link_to("https://www.linkedin.com/in/adrien-lefrancq-669bb3164/", target: "_blank") do %>
+          <i class="fab fa-linkedin"></i>
+        <% end %>
+      </div>
+      <div class="footer-copyright">
+        This website is made with <i class="fa fa-heart"></i> at Le Wagon by Adrien
+      </div>
+    </div>
     <%= javascript_pack_tag "application" %>
   </body>
 </html>
