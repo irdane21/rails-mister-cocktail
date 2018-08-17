@@ -33,6 +33,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'mini_magick', '~> 4.8'
 #Gem dev
 gem 'dotenv-rails', groups: [:development, :test]
+gem 'cloudinary'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
