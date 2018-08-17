@@ -22,6 +22,13 @@ class CocktailsController < ApplicationController
     end
   end
 
+  def random
+    @cocktails = Cocktail.all
+    @cocktail = @cocktails.sample(rand(my_array.count))
+    redirect_to cocktail_path(@cocktail)
+  end
+
+
   def edit
   end
 
