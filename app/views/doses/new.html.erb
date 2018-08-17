@@ -1,8 +1,10 @@
 <div class="container">
-  <h3>What is the new dose? </h3>
-  <%= simple_form_for [@cocktail, @dose] do |f| %>
-    <%= f.input :description %>
-    <%= f.association :ingredient %>
-    <%= f.submit %>
-  <% end %>
+  <div class="min-heigth">
+    <h3>What is the new dose? </h3>
+    <%= simple_form_for [@cocktail, @dose] do |f| %>
+      <%= f.input :description %>
+      <%= f.association :ingredient %>
+      <%= f.submit %>
+    <% end %>
+  </div>
 </div>
