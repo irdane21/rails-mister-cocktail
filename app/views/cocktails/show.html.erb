@@ -17,31 +17,33 @@
   <% end %>
   </ul>
 </div>
-<div class= "row margin">
-  <div class= "col-xs-3">
-    <div class="box">
-      <%= link_to "Change the name", edit_cocktail_path(@cocktail),
-          class: "btn btn-primary" %>
+<div class="container">
+  <div class= "row margin">
+    <div class= "col-xs-3">
+      <div class="box">
+        <%= link_to "Change the name", edit_cocktail_path(@cocktail),
+            class: "btn btn-primary" %>
+      </div>
     </div>
-  </div>
-  <div class= "col-xs-3">
-    <div class="box">
-      <%= link_to "Add an ingredient", new_cocktail_dose_path(@cocktail),
-          class: "btn btn-primary" %>
+    <div class= "col-xs-3">
+      <div class="box">
+        <%= link_to "Add an ingredient", new_cocktail_dose_path(@cocktail),
+            class: "btn btn-primary" %>
+      </div>
     </div>
-  </div>
-  <div class="col-xs-3">
-    <div class="box">
-      <%= link_to "Return to the list", cocktails_path,
-        class: 'btn btn-primary'
-      %>
+    <div class="col-xs-3">
+      <div class="box">
+        <%= link_to "Return to the list", cocktails_path,
+          class: 'btn btn-primary'
+        %>
+      </div>
     </div>
-  </div>
-  <div class="col-xs-3">
-    <div class="box">
-      <%= link_to "Edit a cocktail", edit_cocktail_path(@cocktail),
-        class: 'btn btn-primary'
-      %>
+    <div class="col-xs-3">
+      <div class="box">
+        <%= link_to "Edit a cocktail", edit_cocktail_path(@cocktail),
+          class: 'btn btn-primary'
+        %>
+      </div>
     </div>
   </div>
 </div>
