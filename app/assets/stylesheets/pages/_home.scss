@@ -1,13 +1,10 @@
 // Specific CSS for your home-page
-.custom {
-  background-color: #fdffcd;
-  border: 1px solid #E6E6E6;
-  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
-  font-weight: lighter !important;
-  font: Montserrat;
-  text-align: center;
+body {
+  background-color: rgba(32, 64, 93, 0.4)
 }
 
-#lol {
-  color: red;
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
